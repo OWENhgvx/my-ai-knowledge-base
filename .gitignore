@@ -1,22 +1,42 @@
-# 依赖库 - 递归忽略所有 node_modules
-node_modules/
-
-# 编译产物
-frontend/dist/
-frontend/build/
-backend/dist/
-
-# 环境变量 (保护你的 API Key 不被泄露)
-.env
-.env.local
-*.env
-
-# 系统与编辑器
+# --- 系统与编辑器 ---
 .DS_Store
 .vscode/
 .idea/
+*.log
 
-# 后端相关 (预留)
+# --- 前端 (React) ---
+node_modules/
+frontend/node_modules/
+dist/
+build/
+.eslintcache
+npm-debug.log*
+
+# --- 后端 (Python/FastAPI) ---
 __pycache__/
+*.py[cod]
+*$py.class
 venv/
+.venv/
+env/
 .python-version
+# 忽略打包产物
+backend/dist/
+backend/build/
+
+# --- 数据库与基础设施 ---
+# 忽略 Docker 持久化产生的二进制数据 (非常重要!)
+postgres_data/
+# 如果你以后用到了 Redis
+dump.rdb
+
+# --- 业务相关 ---
+# 忽略用户上传的 PDF/MD 测试文件
+backend/uploads/*
+# 但保留文件夹本身 (可选)
+!backend/uploads/.gitkeep
+
+# --- 环境变量 (绝对不能传!) ---
+.env
+.env.*
+!.env.example

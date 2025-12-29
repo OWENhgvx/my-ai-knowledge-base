@@ -37,3 +37,9 @@
 - **部署实战：**
   - 使用 `Vercel` 部署 React 前端。
   - 配置 **Nginx 反向代理**，解决跨域（CORS）问题。
+
+
+方案 A：极致 AI 路线（推荐：Python FastAPI + MySQL + Redis）
+理由： 你在做一个 AI 项目。面试官更看重你对 RAG 流程、向量检索、提示词工程（Prompt Engineering）的理解。Python 能让你把精力花在这些“值钱”的地方。
+
+适合： 目标是 AI 后端、全栈开发、数据驱动型公司。
